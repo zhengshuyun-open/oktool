@@ -39,7 +39,7 @@ public class TraceWebMvcConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         int order = OrderConstant.TRACE_INTERCEPTOR_ORDER;
-        registry.addInterceptor(new TraceInterceptor())
+        registry.addInterceptor(traceInterceptor)
                 .addPathPatterns("/**")
                 .order(order);
         log.info("TraceInterceptor-任务追踪拦截器已开启. path: {}, order: {}", "/**", order);
