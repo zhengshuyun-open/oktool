@@ -55,11 +55,6 @@ public class TraceInfo implements WriteValue {
     private String clientIp;
 
     /**
-     * User-Agent
-     */
-    private String userAgent;
-
-    /**
      * 响应状态码
      */
     private Integer status;
@@ -98,6 +93,11 @@ public class TraceInfo implements WriteValue {
      * 租户ID
      */
     private List<Object> tenantId;
+
+    /**
+     * User-Agent(放后面, 日志比较长)
+     */
+    private String userAgent;
 
     @Override
     public boolean equals(Object o) {
