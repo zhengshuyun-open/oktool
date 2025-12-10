@@ -54,6 +54,9 @@ public class TraceInterceptor implements HandlerInterceptor {
         traceInfo.setClientIp(ServletUtil.getClientIP(request));
         traceInfo.setUserAgent(getUserAgent(request));
         traceInfo.setStartTime(LocalDateTime.now());
+        traceInfo.setToken(OkContext.getToken());
+        traceInfo.setUserId(OkContext.getLoginId());
+        traceInfo.setTenantId(OkContext.getTenantIds());
         OkContext.setTraceInfo(traceInfo);
 
         log.info("请求开始: {}", traceInfo.toJsonString());

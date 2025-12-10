@@ -57,6 +57,11 @@ public class OkContext {
     private static final String TRACE_INFO_NAME = "traceInfo";
 
     /**
+     * 登录ID
+     */
+    private static final String LOGIN_ID_NAME = "loginId";
+
+    /**
      * Token
      */
     private static final String TOKEN_NAME = "token";
@@ -368,12 +373,33 @@ public class OkContext {
         return get(TRACE_INFO_NAME);
     }
 
+    /**
+     * token
+     */
     public static void setToken(String token) {
         Assert.notBlankParam(token, "token");
         put(TOKEN_NAME, token);
     }
 
+    /**
+     * token
+     */
     public static String getToken() {
         return get(TOKEN_NAME);
+    }
+
+    /**
+     * loginId
+     */
+    public static void setLoginId(String loginId) {
+        Assert.notNullParam(loginId, "loginId");
+        put(LOGIN_ID_NAME, loginId);
+    }
+
+    /**
+     * loginId
+     */
+    public static String getLoginId() {
+        return get(LOGIN_ID_NAME);
     }
 }

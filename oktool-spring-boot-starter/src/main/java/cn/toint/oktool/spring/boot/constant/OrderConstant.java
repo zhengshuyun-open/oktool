@@ -34,18 +34,17 @@ public class OrderConstant {
     public static final int OK_CONTEXT_FILTER_ORDER = Ordered.HIGHEST_PRECEDENCE;
 
     /**
-     * TraceInterceptor-任务追踪拦截器
-     */
-    public static final int TRACE_INTERCEPTOR_ORDER = DEFAULT_ORDER;
-
-    /**
      * SaTokenInterceptor-认证拦截器
      */
-    public static final int SA_TOKEN_INTERCEPTOR_ORDER = TRACE_INTERCEPTOR_ORDER + 10;
+    public static final int SA_TOKEN_INTERCEPTOR_ORDER = DEFAULT_ORDER;
 
     /**
      * FlexTenantInterceptor-租户拦截器
      */
-    public static final int FLEX_TENANT_INTERCEPTOR_ORDER = SA_TOKEN_INTERCEPTOR_ORDER + 10;
+    public static final int FLEX_TENANT_INTERCEPTOR_ORDER = DEFAULT_ORDER + 10;
 
+    /**
+     * TraceInterceptor-任务追踪拦截器
+     */
+    public static final int TRACE_INTERCEPTOR_ORDER = DEFAULT_ORDER + 20;
 }

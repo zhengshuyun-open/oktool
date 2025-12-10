@@ -21,6 +21,7 @@ import cn.toint.oktool.model.WriteValue;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -93,16 +94,21 @@ public class TraceInfo implements WriteValue {
      */
     private String token;
 
+    /**
+     * 租户ID
+     */
+    private List<Object> tenantId;
+
     @Override
-    public boolean equals(Object object) {
-        if (object == null || getClass() != object.getClass()) return false;
-        TraceInfo traceInfo = (TraceInfo) object;
-        return Objects.equals(traceId, traceInfo.traceId) && Objects.equals(method, traceInfo.method) && Objects.equals(uri, traceInfo.uri) && Objects.equals(query, traceInfo.query) && Objects.equals(clientIp, traceInfo.clientIp) && Objects.equals(userAgent, traceInfo.userAgent) && Objects.equals(status, traceInfo.status) && Objects.equals(startTime, traceInfo.startTime) && Objects.equals(endTime, traceInfo.endTime) && Objects.equals(duration, traceInfo.duration) && Objects.equals(slow, traceInfo.slow) && Objects.equals(userId, traceInfo.userId) && Objects.equals(token, traceInfo.token);
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        TraceInfo traceInfo = (TraceInfo) o;
+        return Objects.equals(uri, traceInfo.uri) && Objects.equals(method, traceInfo.method) && Objects.equals(query, traceInfo.query) && Objects.equals(traceId, traceInfo.traceId) && Objects.equals(clientIp, traceInfo.clientIp) && Objects.equals(userAgent, traceInfo.userAgent) && Objects.equals(status, traceInfo.status) && Objects.equals(startTime, traceInfo.startTime) && Objects.equals(endTime, traceInfo.endTime) && Objects.equals(duration, traceInfo.duration) && Objects.equals(slow, traceInfo.slow) && Objects.equals(userId, traceInfo.userId) && Objects.equals(token, traceInfo.token) && Objects.equals(tenantId, traceInfo.tenantId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(traceId, method, uri, query, clientIp, userAgent, status, startTime, endTime, duration, slow, userId, token);
+        return Objects.hash(uri, method, query, traceId, clientIp, userAgent, status, startTime, endTime, duration, slow, userId, token, tenantId);
     }
 
     public String getTraceId() {
@@ -222,5 +228,13 @@ public class TraceInfo implements WriteValue {
             return duration;
         }
         return null;
+    }
+
+    public List<Object> getTenantId() {
+        return tenantId;
+    }
+
+    public void setTenantId(List<Object> tenantId) {
+        this.tenantId = tenantId;
     }
 }

@@ -69,12 +69,8 @@ public class SaTokenInterceptor extends SaInterceptor {
                     Optional.ofNullable(tokenValue)
                             .ifPresent(OkContext::setToken);
 
-                    // 更新追踪信息
-                    Optional.ofNullable(OkContext.getTraceInfo())
-                            .ifPresent(traceInfo -> {
-                                traceInfo.setUserId(loginId);
-                                traceInfo.setToken(tokenValue);
-                            });
+                    // 设置 loginId 到上下文
+                    OkContext.setLoginId(String.valueOf(loginId));
                 });
     }
 }
