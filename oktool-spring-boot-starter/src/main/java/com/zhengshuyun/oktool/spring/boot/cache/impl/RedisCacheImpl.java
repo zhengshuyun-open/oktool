@@ -34,6 +34,7 @@ import java.util.concurrent.TimeUnit;
  * @since 2025/7/2
  */
 public class RedisCacheImpl implements Cache {
+
     @Resource
     private StringRedisTemplate stringRedisTemplate;
 
