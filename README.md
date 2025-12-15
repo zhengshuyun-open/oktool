@@ -5,7 +5,7 @@
 ```xml
 <dependency>
     <groupId>com.zhengshuyun</groupId>
-    <artifactId>oktool</artifactId>
+    <artifactId>oktool-core</artifactId>
     <version>${version}</version>
 </dependency>
 ```
