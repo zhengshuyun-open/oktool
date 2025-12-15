@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.bdocr.model;
+package com.zhengshuyun.oktool.spring.boot.bdocr.model;
 
-import cn.toint.oktool.spring.boot.bdocr.util.VatInvoiceUtil;
+import com.zhengshuyun.oktool.spring.boot.bdocr.util.VatInvoiceUtil;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;

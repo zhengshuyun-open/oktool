@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.bdocr;
+package com.zhengshuyun.oktool.spring.boot.bdocr;
 
 import jakarta.validation.constraints.NotBlank;
 

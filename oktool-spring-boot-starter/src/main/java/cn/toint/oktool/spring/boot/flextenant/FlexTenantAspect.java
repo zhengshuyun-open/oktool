@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.flextenant;
+package com.zhengshuyun.oktool.spring.boot.flextenant;
 
-import cn.toint.oktool.spring.boot.context.OkContext;
+import com.zhengshuyun.oktool.spring.boot.context.OkContext;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;

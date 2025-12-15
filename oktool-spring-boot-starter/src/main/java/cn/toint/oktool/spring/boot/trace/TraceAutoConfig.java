@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.trace;
+package com.zhengshuyun.oktool.spring.boot.trace;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

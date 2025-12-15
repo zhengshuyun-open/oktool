@@ -1,7 +1,7 @@
-//package cn.toint.oktool.spring.boot.content.model;
+//package com.zhengshuyun.oktool.spring.boot.content.model;
 //
 //import cn.dev33.satoken.stp.SaTokenInfo;
-//import cn.toint.oktool.model.WriteValue;
+//import com.zhengshuyun.oktool.model.WriteValue;
 //
 //import java.time.LocalDateTime;
 //import java.util.Objects;

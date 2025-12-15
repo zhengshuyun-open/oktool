@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.satoken;
+package com.zhengshuyun.oktool.spring.boot.satoken;
 
 import cn.dev33.satoken.interceptor.SaInterceptor;
 import cn.dev33.satoken.stp.SaTokenInfo;
 import cn.dev33.satoken.stp.StpUtil;
-import cn.toint.oktool.spring.boot.context.OkContext;
+import com.zhengshuyun.oktool.spring.boot.context.OkContext;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.Resource;
 import org.slf4j.Logger;

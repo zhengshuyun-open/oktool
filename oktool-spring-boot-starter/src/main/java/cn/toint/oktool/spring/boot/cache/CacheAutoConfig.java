@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.cache;
+package com.zhengshuyun.oktool.spring.boot.cache;
 
-import cn.toint.oktool.spring.boot.cache.impl.LocalCacheImpl;
-import cn.toint.oktool.spring.boot.cache.impl.RedisCacheImpl;
+import com.zhengshuyun.oktool.spring.boot.cache.impl.LocalCacheImpl;
+import com.zhengshuyun.oktool.spring.boot.cache.impl.RedisCacheImpl;
 import jakarta.annotation.Resource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

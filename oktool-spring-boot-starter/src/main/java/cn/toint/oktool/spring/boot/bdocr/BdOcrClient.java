@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.bdocr;
+package com.zhengshuyun.oktool.spring.boot.bdocr;
 
 import cn.hutool.v7.core.net.url.UrlBuilder;
 import cn.hutool.v7.http.HttpUtil;
@@ -23,12 +23,12 @@ import cn.hutool.v7.http.client.Response;
 import cn.hutool.v7.http.client.body.HttpBody;
 import cn.hutool.v7.http.client.body.UrlEncodedFormBody;
 import cn.hutool.v7.http.meta.Method;
-import cn.toint.oktool.spring.boot.bdocr.model.*;
-import cn.toint.oktool.spring.boot.cache.Cache;
-import cn.toint.oktool.util.Assert;
-import cn.toint.oktool.util.JacksonUtil;
-import cn.toint.oktool.util.KeyBuilder;
-import cn.toint.oktool.util.RetryUtil;
+import com.zhengshuyun.oktool.spring.boot.bdocr.model.*;
+import com.zhengshuyun.oktool.spring.boot.cache.Cache;
+import com.zhengshuyun.oktool.util.Assert;
+import com.zhengshuyun.oktool.util.JacksonUtil;
+import com.zhengshuyun.oktool.util.KeyBuilder;
+import com.zhengshuyun.oktool.util.RetryUtil;
 import com.fasterxml.jackson.core.type.TypeReference;
 import org.apache.commons.lang3.StringUtils;
 

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.bdocr.util;
+package com.zhengshuyun.oktool.spring.boot.bdocr.util;
 
 import cn.hutool.v7.core.text.StrUtil;
-import cn.toint.oktool.spring.boot.bdocr.model.InvoiceVerifyType;
+import com.zhengshuyun.oktool.spring.boot.bdocr.model.InvoiceVerifyType;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.HashMap;

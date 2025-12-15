@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.flextenant;
+package com.zhengshuyun.oktool.spring.boot.flextenant;
 
-import cn.toint.oktool.spring.boot.context.OkContext;
+import com.zhengshuyun.oktool.spring.boot.context.OkContext;
 import com.mybatisflex.core.tenant.TenantFactory;
 import jakarta.annotation.PostConstruct;
 import org.slf4j.Logger;

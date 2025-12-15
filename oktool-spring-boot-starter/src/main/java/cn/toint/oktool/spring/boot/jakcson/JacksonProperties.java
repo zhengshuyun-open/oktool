@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.jakcson;
+package com.zhengshuyun.oktool.spring.boot.jakcson;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

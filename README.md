@@ -4,7 +4,7 @@
 
 ```xml
 <dependency>
-    <groupId>cn.toint</groupId>
+    <groupId>com.zhengshuyun</groupId>
     <artifactId>oktool</artifactId>
     <version>${version}</version>
 </dependency>
@@ -12,7 +12,7 @@
 
 ```xml
 <dependency>
-    <groupId>cn.toint</groupId>
+    <groupId>com.zhengshuyun</groupId>
     <artifactId>oktool-spring-boot-starter</artifactId>
     <version>${version}</version>
 </dependency>

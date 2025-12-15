@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.bdocr.model;
+package com.zhengshuyun.oktool.spring.boot.bdocr.model;
 
-import cn.toint.oktool.spring.boot.bdocr.util.MultipleInvoiceUtil;
+import com.zhengshuyun.oktool.spring.boot.bdocr.util.MultipleInvoiceUtil;
 
 import java.util.ArrayList;
 import java.util.List;

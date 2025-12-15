@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.satoken;
+package com.zhengshuyun.oktool.spring.boot.satoken;
 
 /**
  * sa-token认证拦截器扩展点

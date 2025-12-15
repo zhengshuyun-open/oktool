@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.cache.impl;
+package com.zhengshuyun.oktool.spring.boot.cache.impl;
 
 import cn.hutool.v7.core.cache.impl.TimedCache;
 import cn.hutool.v7.core.date.TimeUtil;
-import cn.toint.oktool.spring.boot.cache.Cache;
-import cn.toint.oktool.util.Assert;
+import com.zhengshuyun.oktool.spring.boot.cache.Cache;
+import com.zhengshuyun.oktool.util.Assert;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;

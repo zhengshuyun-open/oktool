@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.bdocr.model;
+package com.zhengshuyun.oktool.spring.boot.bdocr.model;
 
-import cn.toint.oktool.spring.boot.bdocr.exception.BdOcrLimitException;
+import com.zhengshuyun.oktool.spring.boot.bdocr.exception.BdOcrLimitException;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.StringUtils;
 

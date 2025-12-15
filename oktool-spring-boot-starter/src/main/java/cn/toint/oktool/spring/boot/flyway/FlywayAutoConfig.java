@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.flyway;
+package com.zhengshuyun.oktool.spring.boot.flyway;
 
-import cn.toint.oktool.spring.boot.flyway.service.FlywayService;
+import com.zhengshuyun.oktool.spring.boot.flyway.service.FlywayService;
 import com.mybatisflex.core.datasource.FlexDataSource;
 import org.flywaydb.core.Flyway;
 import org.springframework.boot.autoconfigure.AutoConfiguration;

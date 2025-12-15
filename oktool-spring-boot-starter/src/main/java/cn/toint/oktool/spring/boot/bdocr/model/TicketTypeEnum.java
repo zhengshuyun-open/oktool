@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.bdocr.model;
+package com.zhengshuyun.oktool.spring.boot.bdocr.model;
 
 /**
  * 票据类型

@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.satoken;
+package com.zhengshuyun.oktool.spring.boot.satoken;
 
 import cn.dev33.satoken.exception.NotLoginException;
 import cn.dev33.satoken.exception.NotPermissionException;
 import cn.dev33.satoken.exception.NotRoleException;
-import cn.toint.oktool.model.ErrCode;
-import cn.toint.oktool.model.Response;
+import com.zhengshuyun.oktool.model.ErrCode;
+import com.zhengshuyun.oktool.model.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ExceptionHandler;

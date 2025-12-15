@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.flextenant;
+package com.zhengshuyun.oktool.spring.boot.flextenant;
 
 /**
  * @author Toint

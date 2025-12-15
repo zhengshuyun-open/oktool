@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.bdocr.util;
+package com.zhengshuyun.oktool.spring.boot.bdocr.util;
 
-import cn.toint.oktool.spring.boot.bdocr.model.InvoiceVerifyType;
+import com.zhengshuyun.oktool.spring.boot.bdocr.model.InvoiceVerifyType;
 
 import java.util.Set;
 

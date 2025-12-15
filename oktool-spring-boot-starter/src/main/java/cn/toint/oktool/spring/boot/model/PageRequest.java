@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.model;
+package com.zhengshuyun.oktool.spring.boot.model;
 
-import cn.toint.oktool.util.Assert;
+import com.zhengshuyun.oktool.util.Assert;
 import com.mybatisflex.core.FlexGlobalConfig;
 import com.mybatisflex.core.paginate.Page;
 import jakarta.validation.constraints.NotNull;

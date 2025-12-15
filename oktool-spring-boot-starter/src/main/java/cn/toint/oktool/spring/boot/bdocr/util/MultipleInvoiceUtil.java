@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.bdocr.util;
+package com.zhengshuyun.oktool.spring.boot.bdocr.util;
 
 import cn.hutool.v7.core.collection.CollUtil;
-import cn.toint.oktool.spring.boot.bdocr.model.MultipleInvoiceResponse;
-import cn.toint.oktool.spring.boot.bdocr.model.MultipleInvoiceVo;
-import cn.toint.oktool.spring.boot.bdocr.model.TicketTypeEnum;
-import cn.toint.oktool.spring.boot.bdocr.model.Word;
-import cn.toint.oktool.util.Assert;
-import cn.toint.oktool.util.JacksonUtil;
+import com.zhengshuyun.oktool.spring.boot.bdocr.model.MultipleInvoiceResponse;
+import com.zhengshuyun.oktool.spring.boot.bdocr.model.MultipleInvoiceVo;
+import com.zhengshuyun.oktool.spring.boot.bdocr.model.TicketTypeEnum;
+import com.zhengshuyun.oktool.spring.boot.bdocr.model.Word;
+import com.zhengshuyun.oktool.util.Assert;
+import com.zhengshuyun.oktool.util.JacksonUtil;
 import com.fasterxml.jackson.databind.JsonNode;
 
 import java.util.ArrayList;

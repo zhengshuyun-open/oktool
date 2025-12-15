@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.bdocr.util;
+package com.zhengshuyun.oktool.spring.boot.bdocr.util;
 
 import cn.hutool.v7.core.collection.CollUtil;
-import cn.toint.oktool.spring.boot.bdocr.model.VatInvoiceResponse;
-import cn.toint.oktool.spring.boot.bdocr.model.VatInvoiceVo;
-import cn.toint.oktool.spring.boot.bdocr.model.Word;
+import com.zhengshuyun.oktool.spring.boot.bdocr.model.VatInvoiceResponse;
+import com.zhengshuyun.oktool.spring.boot.bdocr.model.VatInvoiceVo;
+import com.zhengshuyun.oktool.spring.boot.bdocr.model.Word;
 
 import java.util.ArrayList;
 import java.util.List;

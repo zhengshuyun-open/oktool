@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.bdocr.model;
+package com.zhengshuyun.oktool.spring.boot.bdocr.model;
 
 import cn.hutool.v7.core.util.EnumUtil;
-import cn.toint.oktool.spring.boot.bdocr.util.MultipleInvoiceUtil;
+import com.zhengshuyun.oktool.spring.boot.bdocr.util.MultipleInvoiceUtil;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import org.apache.commons.lang3.StringUtils;

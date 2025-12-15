@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.bdocr.model;
+package com.zhengshuyun.oktool.spring.boot.bdocr.model;
 
 import cn.hutool.v7.core.date.DateUtil;
 import cn.hutool.v7.core.date.TimeUtil;
 import cn.hutool.v7.core.text.StrUtil;
-import cn.toint.oktool.spring.boot.bdocr.util.InvoiceTypeConverter;
-import cn.toint.oktool.spring.boot.bdocr.util.InvoiceVerifyAmountUtil;
-import cn.toint.oktool.util.AmountUtil;
-import cn.toint.oktool.util.Assert;
+import com.zhengshuyun.oktool.spring.boot.bdocr.util.InvoiceTypeConverter;
+import com.zhengshuyun.oktool.spring.boot.bdocr.util.InvoiceVerifyAmountUtil;
+import com.zhengshuyun.oktool.util.AmountUtil;
+import com.zhengshuyun.oktool.util.Assert;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.StringUtils;
 

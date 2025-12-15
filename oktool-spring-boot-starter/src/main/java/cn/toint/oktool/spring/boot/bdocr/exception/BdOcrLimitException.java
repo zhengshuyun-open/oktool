@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.bdocr.exception;
+package com.zhengshuyun.oktool.spring.boot.bdocr.exception;
 
 /**
  * 百度OCR接口QPS超出限制

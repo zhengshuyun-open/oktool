@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.model;
+package com.zhengshuyun.oktool.spring.boot.model;
 
 import cn.hutool.v7.core.data.id.IdUtil;
-import cn.toint.oktool.util.Assert;
+import com.zhengshuyun.oktool.util.Assert;
 import com.mybatisflex.annotation.Column;
 import com.mybatisflex.annotation.Id;
 

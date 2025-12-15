@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.trace;
+package com.zhengshuyun.oktool.spring.boot.trace;
 
 import cn.hutool.v7.core.date.TimeUtil;
-import cn.toint.oktool.model.WriteValue;
+import com.zhengshuyun.oktool.model.WriteValue;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;

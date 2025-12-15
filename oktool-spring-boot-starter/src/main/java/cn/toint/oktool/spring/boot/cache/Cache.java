@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.cache;
+package com.zhengshuyun.oktool.spring.boot.cache;
 
 import java.time.Duration;
 import java.time.LocalDateTime;

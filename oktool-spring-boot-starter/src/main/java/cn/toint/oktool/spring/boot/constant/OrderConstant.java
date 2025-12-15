@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.constant;
+package com.zhengshuyun.oktool.spring.boot.constant;
 
 import org.springframework.core.Ordered;
 

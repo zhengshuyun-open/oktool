@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.flyway.service;
+package com.zhengshuyun.oktool.spring.boot.flyway.service;
 
 import com.mybatisflex.core.datasource.FlexDataSource;
 import jakarta.annotation.PostConstruct;

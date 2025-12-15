@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package cn.toint.oktool.spring.boot.util;
+package com.zhengshuyun.oktool.spring.boot.util;
 
 import cn.hutool.v7.core.collection.CollUtil;
 import cn.hutool.v7.core.io.file.FileUtil;
@@ -21,7 +21,7 @@ import cn.hutool.v7.core.io.resource.Resource;
 import cn.hutool.v7.core.io.resource.ResourceUtil;
 import cn.hutool.v7.core.text.StrUtil;
 import cn.hutool.v7.core.text.split.SplitUtil;
-import cn.toint.oktool.util.Assert;
+import com.zhengshuyun.oktool.util.Assert;
 import com.mybatisflex.core.datasource.DataSourceKey;
 import com.mybatisflex.core.row.Db;
 import com.mybatisflex.core.util.SqlUtil;

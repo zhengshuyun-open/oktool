@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.util;
+package com.zhengshuyun.oktool.spring.boot.util;
 
-import cn.toint.oktool.util.Assert;
+import com.zhengshuyun.oktool.util.Assert;
 import com.mybatisflex.core.paginate.Page;
 
 import java.util.List;

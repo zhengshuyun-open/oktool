@@ -20,15 +20,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cn.toint</groupId>
+    <groupId>com.zhengshuyun</groupId>
     <artifactId>oktool-parent</artifactId>
-    <version>2.0.12-SNAPSHOT</version>
+    <version>3.0.0</version>
 
     <packaging>pom</packaging>
 
     <name>oktool-parent</name>
     <description>oktool是一个Java工具类库</description>
-    <url>https://github.com/toint-open/oktool</url>
+    <url>https://github.com/zhengshuyun-open/oktool</url>
 
     <developers>
         <developer>
@@ -38,9 +38,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/toint-open/oktool.git</connection>
-        <developerConnection>scm:git:ssh://github.com/toint-open/oktool.git</developerConnection>
-        <url>https://github.com/toint-open/oktool</url>
+        <connection>scm:git:git://github.com/zhengshuyun-open/oktool.git</connection>
+        <developerConnection>scm:git:ssh://github.com/zhengshuyun-open/oktool.git</developerConnection>
+        <url>https://github.com/zhengshuyun-open/oktool</url>
     </scm>
 
     <licenses>
@@ -51,7 +51,7 @@
     </licenses>
 
     <modules>
-        <module>oktool</module>
+        <module>oktool-core</module>
         <module>oktool-spring-boot-starter</module>
     </modules>
 
@@ -62,14 +62,14 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <ok-dependencies.version>1.0.13</ok-dependencies.version>
+        <ok-dependencies.version>2.0.0</ok-dependencies.version>
         <springboot.version>3.5.8</springboot.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>cn.toint</groupId>
+                <groupId>com.zhengshuyun</groupId>
                 <artifactId>ok-dependencies</artifactId>
                 <version>${ok-dependencies.version}</version>
                 <type>pom</type>

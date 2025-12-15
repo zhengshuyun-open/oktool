@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package cn.toint.oktool.spring.boot.jakcson;
+package com.zhengshuyun.oktool.spring.boot.jakcson;
 
-import cn.toint.oktool.util.JacksonUtil;
+import com.zhengshuyun.oktool.util.JacksonUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mybatisflex.core.handler.JacksonTypeHandler;
 import jakarta.annotation.PostConstruct;
