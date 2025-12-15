@@ -16,7 +16,7 @@
 
 package com.zhengshuyun.oktool.spring.boot.jakcson;
 
-import com.zhengshuyun.oktool.util.JacksonUtil;
+import com.zhengshuyun.oktool.core.util.JacksonUtil;
 import com.fasterxml.jackson.databind.Module;
 import jakarta.annotation.Resource;
 import org.slf4j.Logger;

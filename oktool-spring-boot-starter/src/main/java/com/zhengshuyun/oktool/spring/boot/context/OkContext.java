@@ -18,8 +18,8 @@ package com.zhengshuyun.oktool.spring.boot.context;
 
 import cn.hutool.v7.core.collection.CollUtil;
 import com.zhengshuyun.oktool.spring.boot.trace.TraceInfo;
-import com.zhengshuyun.oktool.util.Assert;
-import com.zhengshuyun.oktool.util.ScopedValueUtil;
+import com.zhengshuyun.oktool.core.util.Assert;
+import com.zhengshuyun.oktool.core.util.ScopedValueUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.MDC;
 

@@ -25,10 +25,10 @@ import cn.hutool.v7.http.client.body.UrlEncodedFormBody;
 import cn.hutool.v7.http.meta.Method;
 import com.zhengshuyun.oktool.spring.boot.bdocr.model.*;
 import com.zhengshuyun.oktool.spring.boot.cache.Cache;
-import com.zhengshuyun.oktool.util.Assert;
-import com.zhengshuyun.oktool.util.JacksonUtil;
-import com.zhengshuyun.oktool.util.KeyBuilder;
-import com.zhengshuyun.oktool.util.RetryUtil;
+import com.zhengshuyun.oktool.core.util.Assert;
+import com.zhengshuyun.oktool.core.util.JacksonUtil;
+import com.zhengshuyun.oktool.core.util.KeyBuilder;
+import com.zhengshuyun.oktool.core.util.RetryUtil;
 import com.fasterxml.jackson.core.type.TypeReference;
 import org.apache.commons.lang3.StringUtils;
 

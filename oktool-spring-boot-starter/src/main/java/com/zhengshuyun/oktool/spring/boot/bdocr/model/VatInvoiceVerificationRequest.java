@@ -21,8 +21,8 @@ import cn.hutool.v7.core.date.TimeUtil;
 import cn.hutool.v7.core.text.StrUtil;
 import com.zhengshuyun.oktool.spring.boot.bdocr.util.InvoiceTypeConverter;
 import com.zhengshuyun.oktool.spring.boot.bdocr.util.InvoiceVerifyAmountUtil;
-import com.zhengshuyun.oktool.util.AmountUtil;
-import com.zhengshuyun.oktool.util.Assert;
+import com.zhengshuyun.oktool.core.util.AmountUtil;
+import com.zhengshuyun.oktool.core.util.Assert;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.StringUtils;
 

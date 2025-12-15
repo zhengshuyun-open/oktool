@@ -17,7 +17,7 @@
 package com.zhengshuyun.oktool.spring.boot.trace;
 
 import cn.hutool.v7.core.date.TimeUtil;
-import com.zhengshuyun.oktool.model.WriteValue;
+import com.zhengshuyun.oktool.core.model.WriteValue;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;

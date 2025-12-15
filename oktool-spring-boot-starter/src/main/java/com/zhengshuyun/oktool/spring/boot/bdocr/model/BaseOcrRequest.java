@@ -26,8 +26,8 @@ import cn.hutool.v7.http.client.Request;
 import cn.hutool.v7.http.client.Response;
 import cn.hutool.v7.http.meta.HeaderName;
 import cn.hutool.v7.http.meta.HttpHeaderUtil;
-import com.zhengshuyun.oktool.util.Assert;
-import com.zhengshuyun.oktool.util.FileNameUtil;
+import com.zhengshuyun.oktool.core.util.Assert;
+import com.zhengshuyun.oktool.core.util.FileNameUtil;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.StringUtils;
 

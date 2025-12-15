@@ -16,7 +16,7 @@
 
 package com.zhengshuyun.oktool.spring.boot.util;
 
-import com.zhengshuyun.oktool.util.Assert;
+import com.zhengshuyun.oktool.core.util.Assert;
 import com.mybatisflex.core.paginate.Page;
 
 import java.util.List;

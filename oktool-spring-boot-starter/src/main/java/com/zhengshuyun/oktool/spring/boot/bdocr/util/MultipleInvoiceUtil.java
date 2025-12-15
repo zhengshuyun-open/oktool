@@ -21,8 +21,8 @@ import com.zhengshuyun.oktool.spring.boot.bdocr.model.MultipleInvoiceResponse;
 import com.zhengshuyun.oktool.spring.boot.bdocr.model.MultipleInvoiceVo;
 import com.zhengshuyun.oktool.spring.boot.bdocr.model.TicketTypeEnum;
 import com.zhengshuyun.oktool.spring.boot.bdocr.model.Word;
-import com.zhengshuyun.oktool.util.Assert;
-import com.zhengshuyun.oktool.util.JacksonUtil;
+import com.zhengshuyun.oktool.core.util.Assert;
+import com.zhengshuyun.oktool.core.util.JacksonUtil;
 import com.fasterxml.jackson.databind.JsonNode;
 
 import java.util.ArrayList;

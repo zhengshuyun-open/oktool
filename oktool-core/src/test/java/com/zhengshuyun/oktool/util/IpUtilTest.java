@@ -16,7 +16,9 @@
 
 package com.zhengshuyun.oktool.util;
 
-import com.zhengshuyun.oktool.model.PublicIpInfo;
+import com.zhengshuyun.oktool.core.model.PublicIpInfo;
+import com.zhengshuyun.oktool.core.util.IpUtil;
+import com.zhengshuyun.oktool.core.util.JacksonUtil;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;

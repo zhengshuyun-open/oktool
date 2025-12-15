@@ -16,7 +16,7 @@
 
 package com.zhengshuyun.oktool.spring.boot.jakcson;
 
-import com.zhengshuyun.oktool.util.JacksonUtil;
+import com.zhengshuyun.oktool.core.util.JacksonUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mybatisflex.core.handler.JacksonTypeHandler;
 import jakarta.annotation.PostConstruct;

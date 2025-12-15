@@ -19,7 +19,7 @@ package com.zhengshuyun.oktool.spring.boot.cache.impl;
 import cn.hutool.v7.core.date.DateUtil;
 import cn.hutool.v7.core.date.TimeUtil;
 import com.zhengshuyun.oktool.spring.boot.cache.Cache;
-import com.zhengshuyun.oktool.util.Assert;
+import com.zhengshuyun.oktool.core.util.Assert;
 import jakarta.annotation.Resource;
 import org.springframework.data.redis.core.StringRedisTemplate;
 

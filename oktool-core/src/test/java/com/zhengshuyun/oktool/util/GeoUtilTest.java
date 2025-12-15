@@ -16,6 +16,7 @@
 
 package com.zhengshuyun.oktool.util;
 
+import com.zhengshuyun.oktool.core.util.GeoUtil;
 import org.gavaghan.geodesy.GeodeticCurve;
 import org.gavaghan.geodesy.GlobalCoordinates;
 import org.junit.jupiter.api.Assertions;

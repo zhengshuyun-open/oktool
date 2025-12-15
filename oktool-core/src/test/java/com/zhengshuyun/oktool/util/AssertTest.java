@@ -16,6 +16,7 @@
 
 package com.zhengshuyun.oktool.util;
 
+import com.zhengshuyun.oktool.core.util.Assert;
 import jakarta.validation.Valid;
 import jakarta.validation.ValidationException;
 import jakarta.validation.constraints.NotBlank;

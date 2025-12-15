@@ -18,8 +18,8 @@ package com.zhengshuyun.oktool.spring.boot.ratelimiter;
 
 import cn.hutool.v7.core.thread.ratelimiter.RateLimiter;
 import cn.hutool.v7.core.thread.ratelimiter.RateLimiterConfig;
-import com.zhengshuyun.oktool.util.Assert;
-import com.zhengshuyun.oktool.util.KeyBuilder;
+import com.zhengshuyun.oktool.core.util.Assert;
+import com.zhengshuyun.oktool.core.util.KeyBuilder;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.script.DefaultRedisScript;
 

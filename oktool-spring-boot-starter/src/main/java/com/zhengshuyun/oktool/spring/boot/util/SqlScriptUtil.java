@@ -21,7 +21,7 @@ import cn.hutool.v7.core.io.resource.Resource;
 import cn.hutool.v7.core.io.resource.ResourceUtil;
 import cn.hutool.v7.core.text.StrUtil;
 import cn.hutool.v7.core.text.split.SplitUtil;
-import com.zhengshuyun.oktool.util.Assert;
+import com.zhengshuyun.oktool.core.util.Assert;
 import com.mybatisflex.core.datasource.DataSourceKey;
 import com.mybatisflex.core.row.Db;
 import com.mybatisflex.core.util.SqlUtil;
