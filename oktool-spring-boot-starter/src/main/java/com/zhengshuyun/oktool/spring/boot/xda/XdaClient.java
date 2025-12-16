@@ -64,7 +64,7 @@ public class XdaClient {
      * @param staffId 用户ID
      * @return 是否成功
      */
-    public boolean deleteUser(Long staffId) {
+    public void deleteUser(Long staffId) {
         Assert.notNullParam(staffId, "staffId");
 
         try {
@@ -75,7 +75,7 @@ public class XdaClient {
                     Boolean.class
             );
 
-            return Boolean.TRUE.equals(response);
+            Assert.isTrue(Boolean.TRUE.equals(response), "删除用户失败, staffId={}", staffId);
         } catch (Exception e) {
             throw new XdaClientException(e.getMessage(), e);
         }
