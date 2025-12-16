@@ -23,10 +23,10 @@ import cn.hutool.v7.http.client.Response;
 import cn.hutool.v7.http.client.body.HttpBody;
 import cn.hutool.v7.http.client.body.MultipartBody;
 import cn.hutool.v7.http.meta.Method;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.zhengshuyun.oktool.core.util.Assert;
 import com.zhengshuyun.oktool.core.util.JacksonUtil;
 import com.zhengshuyun.oktool.spring.boot.cache.Cache;
+import com.zhengshuyun.oktool.spring.boot.xda.exception.XdaClientException;
 import com.zhengshuyun.oktool.spring.boot.xda.model.XdaClientConfig;
 import com.zhengshuyun.oktool.spring.boot.xda.model.XdaResponse;
 import com.zhengshuyun.oktool.spring.boot.xda.model.XdaToken;
@@ -62,38 +62,22 @@ public class XdaClient {
      * 删除用户
      *
      * @param staffId 用户ID
-     * @throws RuntimeException 删除失败
+     * @return 是否成功
      */
-    public void deleteUser(Long staffId) {
+    public boolean deleteUser(Long staffId) {
         Assert.notNullParam(staffId, "staffId");
 
-        String url = config.host()
-                .addPath("/api/user/" + staffId)
-                .build();
+        try {
+            Boolean response = executeBusinessRequest(
+                    Method.DELETE,
+                    "/api/user/" + staffId,
+                    null,
+                    Boolean.class
+            );
 
-        try (Response response = Request.of(url)
-                .method(Method.DELETE)
-                .send()) {
-
-            String resBody = response.bodyStr();
-            int status = response.getStatus();
-            Assert.isTrue(response.isOk(),
-                    "玺得安删除用户失败, HTTP状态: {}, 响应: {}",
-                    status,
-                    resBody);
-            Assert.notBlank(resBody, "玺得安删除用户失败, 响应为空");
-
-            XdaResponse xdaResponse = JacksonUtil.tryReadValue(resBody, XdaResponse.class);
-            Assert.notNull(xdaResponse, "玺得安删除用户失败, 响应数据格式非法, 响应: {}", resBody);
-
-            boolean data = Optional.ofNullable(xdaResponse.getData())
-                    .map(JsonNode::asBoolean)
-                    .orElse(false);
-
-            Assert.isTrue(xdaResponse.isOk() && data, "玺得安删除用户失败: {}", xdaResponse.getMessage());
-
-        } catch (IOException e) {
-            throw new RuntimeException("玺得安删除用户失败, 网络异常: " + e.getMessage(), e);
+            return Boolean.TRUE.equals(response);
+        } catch (Exception e) {
+            throw new XdaClientException(e.getMessage(), e);
         }
     }
 
@@ -142,67 +126,71 @@ public class XdaClient {
         requestBody.put("scope", "scope1");
         MultipartBody multipartBody = MultipartBody.of(requestBody, StandardCharsets.UTF_8);
 
-        // 返回示例: {"access_token":"7a1abce5-49f1-4e6e-9181-59cab621b816","token_type":"bearer","expires_in":7199,"scope":"scope1"}
-        XdaToken xdaToken = request(Method.POST, "/oauth/token", multipartBody, null, XdaToken.class);
+        XdaToken xdaToken = executeRequest(
+                buildRequest(Method.POST, "/oauth/token", multipartBody, null),
+                XdaToken.class
+        );
 
-        String accessToken = xdaToken.getAccessToken();
-        Assert.notBlank(accessToken, "获取玺得安令牌失败, access_token为空");
-
-        Integer expiresIn = xdaToken.getExpiresIn();
-        Assert.notNull(expiresIn, "获取玺得安令牌失败, expires_in为空");
-        Assert.isTrue(expiresIn >= 0, "获取玺得安令牌失败, expires_in为负数");
+        Assert.notBlank(xdaToken.getAccessToken(), "获取玺得安令牌失败, access_token为空");
+        Assert.notNull(xdaToken.getExpiresIn(), "获取玺得安令牌失败, expires_in为空");
+        Assert.isTrue(xdaToken.getExpiresIn() >= 0, "获取玺得安令牌失败, expires_in为负数");
 
         return xdaToken;
     }
 
-    /**
-     * 请求方法. 内置校验业务码/携带令牌
-     *
-     * @return data
-     */
-    private <T> T requestWithToken(Method method, String url, HttpBody body, Class<T> dataType) {
-        XdaResponse xdaResponse = request(
-                method,
-                url,
-                body,
-                Map.of(HttpHeaders.AUTHORIZATION, "Bearer " + getToken()),
+    private <T> T executeBusinessRequest(Method method, String url, HttpBody body, Class<T> dataType) {
+        Map<String, String> headers = Map.of(HttpHeaders.AUTHORIZATION, "Bearer " + getToken());
+
+        XdaResponse response = executeRequest(
+                buildRequest(method, url, body, headers),
                 XdaResponse.class
         );
 
-        Integer code = xdaResponse.getCode();
-        String message = Optional.ofNullable(xdaResponse.getMessage()).orElse("未知错误");
-        JsonNode data = xdaResponse.getData();
+        Integer code = response.getCode();
+        String message = Optional.ofNullable(response.getMessage()).orElse("玺得安未知错误");
+        Assert.equals(code, 0, message);
 
-        Assert.equals(code, 0, "玺得安业务码异常: {}", message);
-        return JacksonUtil.treeToValue(data, dataType);
+        return JacksonUtil.treeToValue(response.getData(), dataType);
     }
 
-    /**
-     * 请求方法.
-     * 内置校验HTTP状态码/响应格式
-     *
-     * @return JSON数据对象
-     */
-    private <T> T request(Method method, String url, HttpBody body, Map<String, String> headers, Class<T> responseType) {
-        String host = StrUtil.removeSuffix(config.getHost(), "/");
-        url = StrUtil.prependIfMissing(host, "/");
+    private Request buildRequest(Method method,
+                                 String path,
+                                 HttpBody body,
+                                 Map<String, String> headers) {
+        Assert.notNullParam(method, "method");
+        Assert.notBlankParam(path, "path");
 
-        try (Response response = Request.of(host + url)
-                .method(method)
-                .body(body)
-                .header(headers)
-                .send()) {
+        String baseUrl = StrUtil.removeSuffix(config.getHost(), "/");
+        String normalizedPath = StrUtil.prependIfMissing(path, "/");
+        String fullUrl = baseUrl + normalizedPath;
 
-            String resBody = response.bodyStr();
-            Assert.isTrue(response.isOk(), "玺得安响应HTTP状态码异常: {}", response.getStatus());
-            Assert.notBlank(resBody, "玺得安响应为空");
+        Request request = Request.of(fullUrl).method(method);
 
-            T jsonResponse = JacksonUtil.tryReadValue(resBody, responseType);
-            Assert.notNull(jsonResponse, "玺得安响应数据非JSON格式: {}", resBody);
-            return jsonResponse;
+        if (body != null) {
+            request.body(body);
+        }
 
+        if (headers != null && !headers.isEmpty()) {
+            request.header(headers);
+        }
+
+        return request;
+    }
+
+    private <T> T executeRequest(Request request, Class<T> responseType) {
+        try (Response response = request.send()) {
+
+            Assert.isTrue(response.isOk(), "状态码异常: {}", response.getStatus());
+
+            String body = response.bodyStr();
+            Assert.notBlank(body, "响应为空");
+
+            T result = JacksonUtil.tryReadValue(body, responseType);
+            Assert.notNull(result, "响应数据非JSON格式: {}", body);
+
+            return result;
         } catch (IOException e) {
-            throw new RuntimeException("玺得安通讯异常: " + e.getMessage(), e);
+            throw new RuntimeException("网络异常: " + e.getMessage(), e);
         }
     }
 }
