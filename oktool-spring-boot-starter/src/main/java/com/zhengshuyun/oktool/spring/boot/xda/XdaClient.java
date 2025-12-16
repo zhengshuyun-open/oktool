@@ -62,7 +62,6 @@ public class XdaClient {
      * 删除用户
      *
      * @param staffId 用户ID
-     * @return 是否成功
      */
     public void deleteUser(Long staffId) {
         Assert.notNullParam(staffId, "staffId");
