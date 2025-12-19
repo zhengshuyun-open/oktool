@@ -182,14 +182,15 @@ public class BaseOcrRequest {
             }
         }
 
-        if ("pdf".equalsIgnoreCase(extName)) {
+        String normalizedExt = extName.trim().toLowerCase();
+        if ("pdf".equals(normalizedExt)) {
             setPdfFile(urlEncodeAndBase64(fileBytes));
-        } else if ("ofd".contains(extName)) {
+        } else if ("ofd".equals(normalizedExt)) {
             setOfdFile(urlEncodeAndBase64(fileBytes));
-        } else if (List.of("jpg", "jpeg", "png", "bmp").contains(extName)) {
+        } else if (List.of("jpg", "jpeg", "png", "bmp").contains(normalizedExt)) {
             setImage(urlEncodeAndBase64(fileBytes));
         } else {
-            throw new RuntimeException("不支持的格式: " + extName);
+            throw new RuntimeException("不支持的格式: " + normalizedExt);
         }
 
         return this;
